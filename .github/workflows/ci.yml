@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - run: |
+          docker stop dynamic-dns
+          docker rm dynamic-dns
+          docker image rm dynamic-dns
           docker build . -t dynamic-dns -f Urbancode.DynamicIPService/Dockerfile
           docker create -v /var/run/postgresql:/var/run/postgresql -v /etc/appconfig/urbancode-dynamicipservice-service/appsettings.json:/app/appsettings.json:ro --name dynamic-dns dynamic-dns
           docker start dynamic-dns
