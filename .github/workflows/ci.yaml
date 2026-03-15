@@ -1,0 +1,9 @@
+name: ci
+run-name: CI pipeline for Urbancode.DynamicIPService
+on: [push]
+jobs:
+  test-job:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v5
+      - run: bash "Hello world"
