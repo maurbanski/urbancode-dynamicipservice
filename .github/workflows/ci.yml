@@ -1,6 +1,9 @@
 name: ci
 run-name: CI pipeline for Urbancode.DynamicIPService
-on: [push]
+on: 
+  push:
+    branches:
+      - 'main'
 jobs:
   test-job:
     runs-on: self-hosted
