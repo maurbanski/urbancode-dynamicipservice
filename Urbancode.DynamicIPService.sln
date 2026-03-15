@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Urbancode.DynamicIPService.Service", "Urbancode.DynamicIPService\Urbancode.DynamicIPService.Service.csproj", "{0CF2989B-605C-4D03-8E59-3B4505102A63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Urbancode.DynamicIPService.Models", "Urbancode.DynamicIPService.Models\Urbancode.DynamicIPService.Models.csproj", "{55D5B9CA-11E8-46EE-9FA8-F2A18EAD5AF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF2989B-605C-4D03-8E59-3B4505102A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF2989B-605C-4D03-8E59-3B4505102A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF2989B-605C-4D03-8E59-3B4505102A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF2989B-605C-4D03-8E59-3B4505102A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D5B9CA-11E8-46EE-9FA8-F2A18EAD5AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D5B9CA-11E8-46EE-9FA8-F2A18EAD5AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D5B9CA-11E8-46EE-9FA8-F2A18EAD5AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D5B9CA-11E8-46EE-9FA8-F2A18EAD5AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8012EC76-C1AA-439A-8575-909DEB7AF9E9}
+	EndGlobalSection
+EndGlobal
