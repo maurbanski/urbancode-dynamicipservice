@@ -1,18 +1,35 @@
-name: ci
-run-name: CI pipeline for Urbancode.DynamicIPService
+name: cicd
+run-name: CICD pipeline for Urbancode.DynamicIPService
 on: 
   push:
     branches:
       - 'main'
+
+
 jobs:
-  test-job:
+  clean:
+    name: Clean
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v5
       - run: |
           docker stop dynamic-dns
           docker rm dynamic-dns
           docker image rm dynamic-dns
+
+  build:
+    name: Build
+    needs: clean
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
           docker build . -t dynamic-dns -f Urbancode.DynamicIPService/Dockerfile
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - run: |
           docker create -v /var/run/postgresql:/var/run/postgresql -v /etc/appconfig/urbancode-dynamicipservice-service/appsettings.json:/app/appsettings.json:ro --name dynamic-dns dynamic-dns
           docker start dynamic-dns
